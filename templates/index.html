@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hava Durumu Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hava Durumu</h1>
+            <p>Türkiye'nin büyük şehirlerinden canlı hava durumu verileri</p>
+        </div>
+
+        <div class="stats-grid" id="statsGrid">
+            <div class="loading">Veriler yükleniyor...</div>
+        </div>
+
+        <div class="charts-section">
+            <h2 class="section-title">Şehir Bazlı Sıcaklık Grafikleri</h2>
+            <div id="cityCharts">
+                <!-- Her şehir için ayrı grafik buraya eklenecek -->
+            </div>
+        </div>
+
+        <div class="last-update" id="lastUpdate">
+            Son güncelleme: --
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
