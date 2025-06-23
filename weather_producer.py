@@ -3,7 +3,7 @@ import requests
 import json
 import time
 
-API_KEY = "abe82ab3c8b83ffeed68aeb4d0d574eb"
+API_KEY = "***"
 CITIES = ["Istanbul", "Ankara", "Izmir", "Gaziantep", "Samsun"]  
 INTERVAL = 10  # saniye
 
