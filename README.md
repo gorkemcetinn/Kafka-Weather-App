@@ -42,14 +42,7 @@ pip install flask flask-socketio pymongo kafka-python requests
 
 ### 3. Kafka Kurulumu
 ```bash
-# Zookeeper'ı başlatın
-bin/zookeeper-server-start.sh config/zookeeper.properties
-
-# Kafka Server'ı başlatın
-bin/kafka-server-start.sh config/server.properties
-
-# Topic oluşturun
-bin/kafka-topics.sh --create --topic weather --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+docker-compose -f docker-compose.yaml up -d
 ```
 
 ### 4. MongoDB Kurulumu
